@@ -20,7 +20,7 @@ class LoginController: UIViewController {
         
     }
     
-    func configureUI() {
+    private func configureUI() {
         emailTextField.layer.cornerRadius = 35
         emailTextField.clipsToBounds = true
         passwordTextField.layer.cornerRadius = 35
@@ -36,6 +36,10 @@ class LoginController: UIViewController {
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
+        
+        let controller = storyboard?.instantiateViewController(withIdentifier: "\(MainController.self)") as! MainController
+        
+        navigationController?.pushViewController(controller, animated: true)
     }
     
 }
