@@ -3,22 +3,93 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CarRentalAppFinale" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginController" id="BYZ-38-t0r" customClass="LoginController" customModule="CarRentalAppFinale" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logoApp" translatesAutoresizingMaskIntoConstraints="NO" id="LH7-s4-H2N">
+                                <rect key="frame" x="123.66666666666669" y="70" width="146" height="202"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="xLt-yH-mi7">
+                                <rect key="frame" x="30" y="342" width="333" height="176"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7bs-xk-Xiw">
+                                        <rect key="frame" x="0.0" y="0.0" width="333" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="a6B-z1-PfR"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pZg-rr-Utn">
+                                        <rect key="frame" x="0.0" y="106" width="333" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="zIV-Pr-77V"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lrU-Dq-etn">
+                                <rect key="frame" x="30" y="534" width="333" height="31"/>
+                                <color key="tintColor" name="backgroundWhite"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Forgot Password" titleAlignment="center">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="14"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="forgotPasswordButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ms9-q9-F0V"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZFe-qF-bSi">
+                                <rect key="frame" x="30" y="597" width="333" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="uSH-Ez-yIX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="LOG IN" cornerStyle="capsule">
+                                    <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="20"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Hr-V6-Oh7"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="brandBlue"/>
+                        <constraints>
+                            <constraint firstItem="lrU-Dq-etn" firstAttribute="top" secondItem="xLt-yH-mi7" secondAttribute="bottom" constant="16" id="0bw-iE-rWB"/>
+                            <constraint firstItem="LH7-s4-H2N" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.237089" id="5DJ-CK-GNt"/>
+                            <constraint firstItem="LH7-s4-H2N" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vla-7Y-T1o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lrU-Dq-etn" secondAttribute="trailing" constant="30" id="WqV-Mb-eri"/>
+                            <constraint firstItem="ZFe-qF-bSi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="XP3-py-CtP"/>
+                            <constraint firstItem="ZFe-qF-bSi" firstAttribute="top" secondItem="lrU-Dq-etn" secondAttribute="bottom" constant="32" id="bqs-XY-dMf"/>
+                            <constraint firstItem="xLt-yH-mi7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fcT-fg-Avu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xLt-yH-mi7" secondAttribute="trailing" constant="30" id="hDG-bM-xfA"/>
+                            <constraint firstItem="LH7-s4-H2N" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="70" id="l9v-k4-09I"/>
+                            <constraint firstItem="xLt-yH-mi7" firstAttribute="top" secondItem="LH7-s4-H2N" secondAttribute="bottom" constant="70" id="lBf-de-LQy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZFe-qF-bSi" secondAttribute="trailing" constant="30" id="n2W-ef-k3e"/>
+                            <constraint firstItem="lrU-Dq-etn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="oxc-iD-ZIe"/>
+                            <constraint firstItem="LH7-s4-H2N" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.371501" id="sBr-lz-3Rm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cw6-mB-2Gq"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="7bs-xk-Xiw" id="wX6-TO-9va"/>
+                        <outlet property="forgotPasswordButton" destination="lrU-Dq-etn" id="6JW-Br-JAW"/>
+                        <outlet property="loginButton" destination="ZFe-qF-bSi" id="nhZ-YP-abf"/>
+                        <outlet property="passwordTextField" destination="pZg-rr-Utn" id="cd8-hY-fJ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,8 +115,12 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <image name="logoApp" width="146" height="202"/>
+        <namedColor name="backgroundWhite">
+            <color red="0.97647058823529409" green="0.97647058823529409" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="brandBlue">
+            <color red="0.18823529411764706" green="0.30980392156862746" blue="0.99607843137254903" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
