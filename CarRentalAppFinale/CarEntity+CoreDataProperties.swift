@@ -22,7 +22,7 @@ extension CarEntity {
     @NSManaged public var carModel: String?
     @NSManaged public var carImage: String?
     @NSManaged public var modelType: String?
-    @NSManaged public var rentalPrice: Double
+    @NSManaged public var rentalPrice: Int64
     @NSManaged public var rentalPeriod: String?
     @NSManaged public var carDescription: String?
     @NSManaged public var isFavorite: Bool

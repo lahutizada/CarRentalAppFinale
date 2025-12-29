@@ -1,170 +1,370 @@
 [
-  {
-    "title": "Standard",
-    "categoryImage": "storiesPrius",
-    "cars": [
-      {
-        "id": "toyota1",
-        "brand": "Toyota",
-        "carModel": "Prius",
-        "carImage": "prius",
-        "rentalPrice": 350,
-        "rentalPeriod": "/month",
-        "modelType": "Engine",
-        "carDescription": "4-Cyl 1.5 Liter"
-      },
-      {
-        "id": "toyota2",
-        "brand": "Toyota",
-        "carModel": "Prius",
-        "carImage": "prius",
-        "rentalPrice": 350,
-        "rentalPeriod": "/month",
-        "modelType": "Engine",
-        "carDescription": "4-Cyl 1.5 Liter"
-      },
-      {
-        "id": "toyota3",
-        "brand": "Toyota",
-        "carModel": "Prius",
-        "carImage": "prius",
-        "rentalPrice": 350,
-        "rentalPeriod": "/month",
-        "modelType": "Engine",
-        "carDescription": "4-Cyl 1.5 Liter"
-      },
-      {
-        "id": "toyota4",
-        "brand": "Toyota",
-        "carModel": "Prius",
-        "carImage": "prius",
-        "rentalPrice": 350,
-        "rentalPeriod": "/month",
-        "modelType": "Engine",
-        "carDescription": "4-Cyl 1.5 Liter"
-      },
-      {
-        "id": "toyota5",
-        "brand": "Toyota",
-        "carModel": "Prius",
-        "carImage": "prius",
-        "rentalPrice": 350,
-        "rentalPeriod": "/month",
-        "modelType": "Engine",
-        "carDescription": "4-Cyl 1.5 Liter"
-      },
-    ]
-  },
-  {
-    "title": "Prestige",
-    "categoryImage": "storiesAMG",
-    "cars": [
-        {
-          "id": "mercedes1",
-          "brand": "Mercedes",
-          "carModel": "C-Class",
-          "carImage": "cclass",
-          "rentalPrice": 550,
-          "rentalPeriod": "/month",
-          "modelType": "Engine",
-          "carDescription": "4-Cyl 2.0 Liter"
-        },
-        {
-          "id": "mercedes2",
-          "brand": "Mercedes",
-          "carModel": "C-Class",
-          "carImage": "cclass",
-          "rentalPrice": 550,
-          "rentalPeriod": "/month",
-          "modelType": "Engine",
-          "carDescription": "4-Cyl 2.0 Liter"
-        },
-        {
-          "id": "mercedes3",
-          "brand": "Mercedes",
-          "carModel": "C-Class",
-          "carImage": "cclass",
-          "rentalPrice": 550,
-          "rentalPeriod": "/month",
-          "modelType": "Engine",
-          "carDescription": "4-Cyl 2.0 Liter"
-        }
-    ]
-  },
-  {
-    "title": "SUV",
-    "categoryImage": "storiesRAV",
-    "cars": [
-        {
-          "id": "suv1",
-          "brand": "Toyota",
-          "carModel": "RAV4",
-          "carImage": "rav4",
-          "rentalPrice": 450,
-          "rentalPeriod": "/month",
-          "modelType": "Engine",
-          "carDescription": "AWD 2.5 Liter"
-        },
-        {
-          "id": "suv2",
-          "brand": "Toyota",
-          "carModel": "RAV4",
-          "carImage": "rav4",
-          "rentalPrice": 450,
-          "rentalPeriod": "/month",
-          "modelType": "Engine",
-          "carDescription": "AWD 2.5 Liter"
-        },
-        {
-          "id": "suv3",
-          "brand": "Toyota",
-          "carModel": "RAV4",
-          "carImage": "rav4",
-          "rentalPrice": 450,
-          "rentalPeriod": "/month",
-          "modelType": "Engine",
-          "carDescription": "AWD 2.5 Liter"
-        },
-        {
-          "id": "suv4",
-          "brand": "Toyota",
-          "carModel": "RAV4",
-          "carImage": "rav4",
-          "rentalPrice": 450,
-          "rentalPeriod": "/month",
-          "modelType": "Engine",
-          "carDescription": "AWD 2.5 Liter"
-        },
-        {
-          "id": "suv5",
-          "brand": "Toyota",
-          "carModel": "RAV4",
-          "carImage": "rav4",
-          "rentalPrice": 450,
-          "rentalPeriod": "/month",
-          "modelType": "Engine",
-          "carDescription": "AWD 2.5 Liter"
-        },
-        {
-          "id": "suv6",
-          "brand": "Toyota",
-          "carModel": "RAV4",
-          "carImage": "rav4",
-          "rentalPrice": 450,
-          "rentalPeriod": "/month",
-          "modelType": "Engine",
-          "carDescription": "AWD 2.5 Liter"
-        },
-        {
-          "id": "suv7",
-          "brand": "Toyota",
-          "carModel": "RAV4",
-          "carImage": "rav4",
-          "rentalPrice": 450,
-          "rentalPeriod": "/month",
-          "modelType": "Engine",
-          "carDescription": "AWD 2.5 Liter"
-        }
-    ]
-  }
+    {
+        "title": "Standard",
+        "categoryImage": "storiesPrius",
+        "cars": [
+            {
+                "id": "byd1",
+                "brand": "BYD",
+                "carModel": "Destroyer",
+                "carImage": "byd",
+                "rentalPrice": 350,
+                "rentalPeriod": "/month",
+                "modelType": "Hybrid",
+                "carDescription": "4-Cyl 1.5 Liter"
+            },
+            {
+                "id": "byd2",
+                "brand": "BYD",
+                "carModel": "Destroyer",
+                "carImage": "byd",
+                "rentalPrice": 350,
+                "rentalPeriod": "/month",
+                "modelType": "Hybrid",
+                "carDescription": "4-Cyl 1.5 Liter"
+            },
+            {
+                "id": "byd3",
+                "brand": "BYD",
+                "carModel": "Destroyer",
+                "carImage": "byd",
+                "rentalPrice": 350,
+                "rentalPeriod": "/month",
+                "modelType": "Hybrid",
+                "carDescription": "4-Cyl 1.5 Liter"
+            },
+            {
+                "id": "byd4",
+                "brand": "BYD",
+                "carModel": "Destroyer",
+                "carImage": "byd",
+                "rentalPrice": 350,
+                "rentalPeriod": "/month",
+                "modelType": "Hybrid",
+                "carDescription": "4-Cyl 1.5 Liter"
+            },
+            {
+                "id": "toyota1",
+                "brand": "Toyota",
+                "carModel": "Prius",
+                "carImage": "prius",
+                "rentalPrice": 350,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 1.5 Liter"
+            },
+            {
+                "id": "toyota2",
+                "brand": "Toyota",
+                "carModel": "Prius",
+                "carImage": "prius",
+                "rentalPrice": 350,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 1.5 Liter"
+            },
+            {
+                "id": "toyota3",
+                "brand": "Toyota",
+                "carModel": "Prius",
+                "carImage": "prius",
+                "rentalPrice": 350,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 1.5 Liter"
+            },
+            {
+                "id": "toyota4",
+                "brand": "Toyota",
+                "carModel": "Prius",
+                "carImage": "prius",
+                "rentalPrice": 350,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 1.5 Liter"
+            },
+            {
+                "id": "toyota5",
+                "brand": "Toyota",
+                "carModel": "Prius",
+                "carImage": "prius",
+                "rentalPrice": 350,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 1.5 Liter"
+            },
+        ]
+    },
+    {
+        "title": "Prestige",
+        "categoryImage": "storiesAMG",
+        "cars": [
+            {
+                "id": "hyundai1",
+                "brand": "Hyundai",
+                "carModel": "Tucson",
+                "carImage": "hyundai",
+                "rentalPrice": 550,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "hyundai2",
+                "brand": "Hyundai",
+                "carModel": "Tucson",
+                "carImage": "hyundai",
+                "rentalPrice": 550,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "hyundai3",
+                "brand": "Hyundai",
+                "carModel": "Tucson",
+                "carImage": "hyundai",
+                "rentalPrice": 550,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "hyundai4",
+                "brand": "Hyundai",
+                "carModel": "Tucson",
+                "carImage": "hyundai",
+                "rentalPrice": 550,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "ferrari1",
+                "brand": "Ferrari",
+                "carModel": "F12 Berlinetta",
+                "carImage": "ferrari",
+                "rentalPrice": 750,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "ferrari2",
+                "brand": "Ferrari",
+                "carModel": "F12 Berlinetta",
+                "carImage": "ferrari",
+                "rentalPrice": 750,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "ferrari3",
+                "brand": "Ferrari",
+                "carModel": "F12 Berlinetta",
+                "carImage": "ferrari",
+                "rentalPrice": 750,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "ferrari4",
+                "brand": "Ferrari",
+                "carModel": "F12 Berlinetta",
+                "carImage": "ferrari",
+                "rentalPrice": 750,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "corvet1",
+                "brand": "Chevrolet",
+                "carModel": "Corvette Comvertible C2",
+                "carImage": "corvet",
+                "rentalPrice": 1250,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "corvet2",
+                "brand": "Chevrolet",
+                "carModel": "Corvette Comvertible C2",
+                "carImage": "corvet",
+                "rentalPrice": 1250,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "corvet3",
+                "brand": "Chevrolet",
+                "carModel": "Corvette Comvertible C2",
+                "carImage": "corvet",
+                "rentalPrice": 1250,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "corvet4",
+                "brand": "Chevrolet",
+                "carModel": "Corvette Comvertible C2",
+                "carImage": "corvet",
+                "rentalPrice": 1250,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "mercedes1",
+                "brand": "Mercedes",
+                "carModel": "C-Class",
+                "carImage": "cclass",
+                "rentalPrice": 550,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "mercedes2",
+                "brand": "Mercedes",
+                "carModel": "C-Class",
+                "carImage": "cclass",
+                "rentalPrice": 550,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            },
+            {
+                "id": "mercedes3",
+                "brand": "Mercedes",
+                "carModel": "C-Class",
+                "carImage": "cclass",
+                "rentalPrice": 550,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "4-Cyl 2.0 Liter"
+            }
+        ]
+    },
+    {
+        "title": "SUV",
+        "categoryImage": "storiesRAV",
+        "cars": [
+            {
+                "id": "truck1",
+                "brand": "Tesla",
+                "carModel": "Cyber Truck S",
+                "carImage": "truck",
+                "rentalPrice": 950,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "AWD 2.5 Liter"
+            },
+            {
+                "id": "truck2",
+                "brand": "Tesla",
+                "carModel": "Cyber Truck S",
+                "carImage": "truck",
+                "rentalPrice": 950,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "AWD 2.5 Liter"
+            },
+            {
+                "id": "truck3",
+                "brand": "Tesla",
+                "carModel": "Cyber Truck S",
+                "carImage": "truck",
+                "rentalPrice": 950,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "AWD 2.5 Liter"
+            },
+            {
+                "id": "truck4",
+                "brand": "Tesla",
+                "carModel": "Cyber Truck S",
+                "carImage": "truck",
+                "rentalPrice": 950,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "AWD 2.5 Liter"
+            },
+            {
+                "id": "suv1",
+                "brand": "Toyota",
+                "carModel": "RAV4",
+                "carImage": "rav4",
+                "rentalPrice": 450,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "AWD 2.5 Liter"
+            },
+            {
+                "id": "suv2",
+                "brand": "Toyota",
+                "carModel": "RAV4",
+                "carImage": "rav4",
+                "rentalPrice": 450,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "AWD 2.5 Liter"
+            },
+            {
+                "id": "suv3",
+                "brand": "Toyota",
+                "carModel": "RAV4",
+                "carImage": "rav4",
+                "rentalPrice": 450,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "AWD 2.5 Liter"
+            },
+            {
+                "id": "suv4",
+                "brand": "Toyota",
+                "carModel": "RAV4",
+                "carImage": "rav4",
+                "rentalPrice": 450,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "AWD 2.5 Liter"
+            },
+            {
+                "id": "suv5",
+                "brand": "Toyota",
+                "carModel": "RAV4",
+                "carImage": "rav4",
+                "rentalPrice": 450,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "AWD 2.5 Liter"
+            },
+            {
+                "id": "suv6",
+                "brand": "Toyota",
+                "carModel": "RAV4",
+                "carImage": "rav4",
+                "rentalPrice": 450,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "AWD 2.5 Liter"
+            },
+            {
+                "id": "suv7",
+                "brand": "Toyota",
+                "carModel": "RAV4",
+                "carImage": "rav4",
+                "rentalPrice": 450,
+                "rentalPeriod": "/month",
+                "modelType": "Engine",
+                "carDescription": "AWD 2.5 Liter"
+            }
+        ]
+    }
 ]

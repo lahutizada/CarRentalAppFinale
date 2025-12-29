@@ -10,10 +10,9 @@ import Foundation
 final class PreloadService {
 
     static func preloadIfNeeded() {
-        print("🚀 preloadIfNeeded CALLED")
 
         guard let categories = JSONLoader.loadCategories() else {
-            print("❌ JSON not loaded")
+            print("JSON not loaded")
             return
         }
 

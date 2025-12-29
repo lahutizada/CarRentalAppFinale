@@ -20,7 +20,7 @@ struct Car: Codable {
     let carImage: String?
     let carModel: String?
     let modelType: String?
-    let rentalPrice: Double?
+    let rentalPrice: Int?
     let rentalPeriod: String?
     let carDescription: String?
 }

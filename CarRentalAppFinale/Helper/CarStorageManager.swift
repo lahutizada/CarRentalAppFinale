@@ -19,8 +19,11 @@ final class CarStorageManager {
         
         var addedCars = 0
         
-        categories.forEach { category in
-            let categoryEntity = fetchOrCreateCategory(category)
+        for (index, category) in categories.enumerated() {
+
+               let categoryEntity = fetchOrCreateCategory(category)
+
+               categoryEntity.order = Int16(index)
             
             category.cars?.forEach { car in
                 
@@ -42,7 +45,16 @@ final class CarStorageManager {
                     .lowercased()
                 
                 if let existing = fetchCar(by: carId) {
+
+                    existing.brand = car.brand
+                    existing.carModel = car.carModel
+                    existing.modelType = car.modelType
+                    existing.carImage = car.carImage
+                    existing.rentalPrice = Int64(car.rentalPrice ?? 0)
+                    existing.rentalPeriod = car.rentalPeriod
+                    existing.carDescription = car.carDescription
                     existing.searchText = searchText
+
                     return
                 }
                 
@@ -52,7 +64,7 @@ final class CarStorageManager {
                 carEntity.carModel = car.carModel
                 carEntity.modelType = car.modelType
                 carEntity.carImage = car.carImage
-                carEntity.rentalPrice = car.rentalPrice ?? 0
+                carEntity.rentalPrice = Int64(car.rentalPrice ?? 0)
                 carEntity.rentalPeriod = car.rentalPeriod
                 carEntity.carDescription = car.carDescription
                 carEntity.searchText = searchText
@@ -72,8 +84,10 @@ final class CarStorageManager {
     }
     
     func fetchCategories() -> [CategoryEntity] {
-        let request: NSFetchRequest<CategoryEntity> =
-        CategoryEntity.fetchRequest()
+        let request: NSFetchRequest<CategoryEntity> = CategoryEntity.fetchRequest()
+        request.sortDescriptors = [
+            NSSortDescriptor(key: "order", ascending: true)
+        ]
         return (try? context.fetch(request)) ?? []
     }
     
