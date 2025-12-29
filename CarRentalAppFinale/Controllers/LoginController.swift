@@ -13,6 +13,8 @@ class LoginController: UIViewController {
     @IBOutlet weak var forgotPasswordButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
+    let defaults = DataManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -37,9 +39,30 @@ class LoginController: UIViewController {
     
     @IBAction func loginButtonTapped(_ sender: Any) {
         
-        let controller = storyboard?.instantiateViewController(withIdentifier: "\(MainController.self)") as! MainController
-        
-        navigationController?.pushViewController(controller, animated: true)
+        defaults.setData(value: true, key: .IsLoggedIn)
+
+        goToMainAnimated()
     }
-    
+    private func goToMainAnimated() {
+
+        guard
+            let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+            let window = sceneDelegate.window
+        else { return }
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let tabBarVC = storyboard.instantiateViewController(
+            withIdentifier: "TabBarController"
+        )
+
+        UIView.transition(
+            with: window,
+            duration: 0.35,
+            options: .transitionCrossDissolve,
+            animations: {
+                window.rootViewController = tabBarVC
+            },
+            completion: nil
+        )
+    }
 }

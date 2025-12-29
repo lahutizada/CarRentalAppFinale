@@ -73,6 +73,14 @@
                             <constraint firstAttribute="height" constant="200" id="gYr-Mg-wpT"/>
                         </constraints>
                     </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5DR-la-rxj">
+                        <rect key="frame" x="10" y="302" width="53" height="43"/>
+                        <state key="normal" title="Button"/>
+                        <buttonConfiguration key="configuration" style="plain" image="star"/>
+                        <connections>
+                            <action selector="favoriteButtonTapped:" destination="gTV-IL-0wX" eventType="touchUpInside" id="xu6-VA-fRb"/>
+                        </connections>
+                    </button>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
@@ -86,7 +94,9 @@
                 <constraint firstAttribute="bottom" secondItem="YW4-8L-UvZ" secondAttribute="bottom" id="Rgy-Bt-fYa"/>
                 <constraint firstItem="40W-Vx-YMM" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="37" id="UFB-GW-3uy"/>
                 <constraint firstItem="YW4-8L-UvZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="Wte-EJ-Avm"/>
+                <constraint firstItem="5DR-la-rxj" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="10" id="mwE-my-BPQ"/>
                 <constraint firstAttribute="trailing" secondItem="ztr-bJ-urq" secondAttribute="trailing" constant="35" id="ozt-BV-VSR"/>
+                <constraint firstAttribute="bottom" secondItem="5DR-la-rxj" secondAttribute="bottom" constant="10" id="p7Z-3T-q8n"/>
                 <constraint firstAttribute="bottom" secondItem="rxr-od-lhT" secondAttribute="bottom" id="sm3-AZ-Jho"/>
             </constraints>
             <connections>
@@ -94,6 +104,7 @@
                 <outlet property="carBrandLabel" destination="WL3-b8-vVx" id="0BW-kx-jfX"/>
                 <outlet property="carDetailsLabel" destination="FBt-Yg-HT4" id="w6H-FL-zes"/>
                 <outlet property="carImage" destination="rxr-od-lhT" id="ANK-oc-VmV"/>
+                <outlet property="favoriteButton" destination="5DR-la-rxj" id="CbK-1d-CF5"/>
                 <outlet property="leftStack" destination="40W-Vx-YMM" id="Rnx-go-HBd"/>
                 <outlet property="modelTypeLabel" destination="lmU-Iu-nAq" id="JEL-kJ-IOS"/>
                 <outlet property="rentalPeriodLabel" destination="aaa-cI-XE4" id="fIt-qh-jkN"/>
@@ -104,6 +115,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="star" width="29" height="29"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

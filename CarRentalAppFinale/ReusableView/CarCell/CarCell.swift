@@ -18,7 +18,9 @@ class CarCell: UICollectionViewCell {
     @IBOutlet weak var rentalPeriodLabel: UILabel!
     @IBOutlet weak var carDetailsLabel: UILabel!
     @IBOutlet weak var carImage: UIImageView!
+    @IBOutlet weak var favoriteButton: UIButton!
     
+    var onFavoriteTap: (() -> Void)?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -27,6 +29,11 @@ class CarCell: UICollectionViewCell {
 
     }
 
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        onFavoriteTap = nil
+    }
+    
     private func setupUI() {
 
         layer.cornerRadius = 24
@@ -49,5 +56,30 @@ class CarCell: UICollectionViewCell {
         rentalPeriodLabel.textColor = .brandGray
         modelTypeLabel.textColor = .loginBlack
         carDetailsLabel.textColor = .loginBlack
+        
+        favoriteButton.addTarget(
+            self,
+            action: #selector(favoriteButtonTapped),
+            for: .touchUpInside
+        )
+    }
+    
+    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
+        onFavoriteTap?()
+    }
+    
+    func configure(with car: CarEntity) {
+        carBrandLabel.text = car.brand
+        brandModelLabel.text = car.carModel
+        modelTypeLabel.text = car.modelType
+        rentalPeriodLabel.text = car.rentalPeriod
+        rentalPriceLabel.text = "$\(car.rentalPrice)"
+        carDetailsLabel.text = car.carDescription
+        carImage.image = UIImage(named: car.carImage ?? "")
+        
+        let imageName = car.isFavorite ? "star.fill" : "star"
+           let image = UIImage(named: imageName)
+
+           favoriteButton.setImage(image, for: .normal)
     }
 }
