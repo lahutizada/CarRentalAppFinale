@@ -70,17 +70,17 @@
                         <constraints>
                             <constraint firstItem="lrU-Dq-etn" firstAttribute="top" secondItem="xLt-yH-mi7" secondAttribute="bottom" constant="16" id="0bw-iE-rWB"/>
                             <constraint firstItem="LH7-s4-H2N" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.237089" id="5DJ-CK-GNt"/>
+                            <constraint firstItem="xLt-yH-mi7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="BAC-92-ojf"/>
                             <constraint firstItem="LH7-s4-H2N" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Vla-7Y-T1o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lrU-Dq-etn" secondAttribute="trailing" constant="30" id="WqV-Mb-eri"/>
                             <constraint firstItem="ZFe-qF-bSi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="XP3-py-CtP"/>
                             <constraint firstItem="ZFe-qF-bSi" firstAttribute="top" secondItem="lrU-Dq-etn" secondAttribute="bottom" constant="32" id="bqs-XY-dMf"/>
-                            <constraint firstItem="xLt-yH-mi7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fcT-fg-Avu"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xLt-yH-mi7" secondAttribute="trailing" constant="30" id="hDG-bM-xfA"/>
                             <constraint firstItem="LH7-s4-H2N" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="70" id="l9v-k4-09I"/>
                             <constraint firstItem="xLt-yH-mi7" firstAttribute="top" secondItem="LH7-s4-H2N" secondAttribute="bottom" constant="70" id="lBf-de-LQy"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZFe-qF-bSi" secondAttribute="trailing" constant="30" id="n2W-ef-k3e"/>
                             <constraint firstItem="lrU-Dq-etn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="oxc-iD-ZIe"/>
                             <constraint firstItem="LH7-s4-H2N" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.371501" id="sBr-lz-3Rm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xLt-yH-mi7" secondAttribute="trailing" constant="30" id="vzv-JY-igL"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Cw6-mB-2Gq"/>

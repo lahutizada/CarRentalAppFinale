@@ -36,7 +36,7 @@ class CaterogyCell: UICollectionViewCell {
 
         func configure(with category: CategoryEntity, isSelected: Bool) {
             
-            titleLabel.text = category.title
+            titleLabel.text = category.categoryTitle
 
             let count = category.cars?.count ?? 0
             countLabel.text = "\(count)"

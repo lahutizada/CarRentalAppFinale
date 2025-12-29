@@ -33,7 +33,7 @@ final class CarStorageManager {
                 let searchComponents: [String] = [
                     car.brand,
                     car.carModel,
-                    category.title,
+                    category.categoryTitle,
                     car.carDescription,
                     car.modelType,
                     car.rentalPeriod,
@@ -128,7 +128,7 @@ final class CarStorageManager {
     
     private func fetchOrCreateCategory(_ category: CarCategory) -> CategoryEntity {
         let request: NSFetchRequest<CategoryEntity> = CategoryEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "title == %@", category.title ?? "")
+        request.predicate = NSPredicate(format: "categoryTitle == %@", category.categoryTitle ?? "")
         request.fetchLimit = 1
         
         if let existing = (try? context.fetch(request))?.first {
@@ -137,7 +137,7 @@ final class CarStorageManager {
         }
         
         let entity = CategoryEntity(context: context)
-        entity.title = category.title
+        entity.categoryTitle = category.categoryTitle
         entity.categoryImage = category.categoryImage
         return entity
     }

@@ -1,6 +1,6 @@
 [
     {
-        "title": "Standard",
+        "categoryTitle": "Standard",
         "categoryImage": "storiesPrius",
         "cars": [
             {
@@ -96,7 +96,7 @@
         ]
     },
     {
-        "title": "Prestige",
+        "categoryTitle": "Prestige",
         "categoryImage": "storiesAMG",
         "cars": [
             {
@@ -252,7 +252,7 @@
         ]
     },
     {
-        "title": "SUV",
+        "categoryTitle": "SUV",
         "categoryImage": "storiesRAV",
         "cars": [
             {

@@ -19,7 +19,7 @@ extension CategoryEntity {
     }
 
     @NSManaged public var categoryImage: String?
-    @NSManaged public var title: String?
+    @NSManaged public var categoryTitle: String?
     @NSManaged public var order: Int16
     @NSManaged public var cars: NSSet?
 

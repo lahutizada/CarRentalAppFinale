@@ -9,7 +9,7 @@ import Foundation
 
 
 struct CarCategory: Codable {
-    let title: String?
+    let categoryTitle: String?
     let categoryImage: String?
     let cars: [Car]?
 }

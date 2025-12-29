@@ -26,13 +26,16 @@ class MainController: UIViewController {
         
         collection.delegate = self
         collection.dataSource = self
+        
         searchTextField.layer.cornerRadius = 35
         searchTextField.clipsToBounds = true
         searchTextField.tintColor = .white
         searchTextField.setLeftPaddingPoints(30)
+        
         collection.register(
             UINib(nibName: "CarCell", bundle: nil),
             forCellWithReuseIdentifier: "CarCell")
+        
         collection.register(
             UINib(nibName: "HeaderView", bundle: nil),
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,

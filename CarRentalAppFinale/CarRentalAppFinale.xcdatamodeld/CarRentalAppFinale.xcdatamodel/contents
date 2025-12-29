@@ -15,8 +15,8 @@
     </entity>
     <entity name="CategoryEntity" representedClassName="CategoryEntity" syncable="YES">
         <attribute name="categoryImage" optional="YES" attributeType="String"/>
+        <attribute name="categoryTitle" optional="YES" attributeType="String"/>
         <attribute name="order" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
-        <attribute name="title" optional="YES" attributeType="String"/>
         <relationship name="cars" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CarEntity" inverseName="category" inverseEntity="CarEntity"/>
     </entity>
 </model>
