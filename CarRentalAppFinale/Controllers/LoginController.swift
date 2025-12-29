@@ -19,7 +19,6 @@ class LoginController: UIViewController {
         super.viewDidLoad()
 
         configureUI()
-        
     }
     
     private func configureUI() {
@@ -30,11 +29,10 @@ class LoginController: UIViewController {
         loginButton.layer.cornerRadius = 35
         loginButton.clipsToBounds = true
         loginButton.tintColor = .loginBlack
-        
     }
     
-    
     @IBAction func forgotPasswordButtonTapped(_ sender: Any) {
+        
     }
     
     @IBAction func loginButtonTapped(_ sender: Any) {
@@ -44,24 +42,18 @@ class LoginController: UIViewController {
         goToMainAnimated()
     }
     private func goToMainAnimated() {
-
-        guard
-            let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
-            let window = sceneDelegate.window
+        guard let sceneDelegate = UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate,
+        let window = sceneDelegate.window
         else { return }
 
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let tabBarVC = storyboard.instantiateViewController(
-            withIdentifier: "TabBarController"
-        )
+        let tabBarVC = storyboard.instantiateViewController(withIdentifier: "TabBarController")
 
         UIView.transition(
             with: window,
             duration: 0.35,
             options: .transitionCrossDissolve,
-            animations: {
-                window.rootViewController = tabBarVC
-            },
+            animations: { window.rootViewController = tabBarVC },
             completion: nil
         )
     }

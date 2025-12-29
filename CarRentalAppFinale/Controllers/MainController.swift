@@ -15,7 +15,7 @@ class MainController: UIViewController {
     
     let coreData = CarStorageManager.shared
     var cars: [CarEntity] = []
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         cars = coreData.fetchAllCars()
@@ -30,7 +30,9 @@ class MainController: UIViewController {
         searchTextField.clipsToBounds = true
         searchTextField.tintColor = .white
         searchTextField.setLeftPaddingPoints(30)
-        collection.register(UINib(nibName: "CarCell", bundle: nil), forCellWithReuseIdentifier: "CarCell")
+        collection.register(
+            UINib(nibName: "CarCell", bundle: nil),
+            forCellWithReuseIdentifier: "CarCell")
         collection.register(
             UINib(nibName: "HeaderView", bundle: nil),
             forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
@@ -42,12 +44,12 @@ class MainController: UIViewController {
             for: .editingChanged
         )
     }
+    
     @objc private func searchChanged() {
         let text = searchTextField.text ?? ""
         cars = coreData.searchCars(query: text)
         collection.reloadData()
     }
-    
 }
 
 extension MainController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -56,27 +58,23 @@ extension MainController: UICollectionViewDelegate, UICollectionViewDataSource, 
         cars.count
     }
     
-    func collectionView(
-        _ collectionView: UICollectionView,
-        cellForItemAt indexPath: IndexPath
-    ) -> UICollectionViewCell {
-
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         let cell = collectionView.dequeueReusableCell(
             withReuseIdentifier: "CarCell",
             for: indexPath
         ) as! CarCell
-
+        
         let car = cars[indexPath.row]
         cell.configure(with: car)
-
+        
         cell.onFavoriteTap = { [weak self] in
             guard let self = self else { return }
-
+            
             self.coreData.toggleFavorite(for: car)
-
+            
             collectionView.reloadItems(at: [indexPath])
         }
-
         return cell
     }
     
@@ -98,32 +96,25 @@ extension MainController: UICollectionViewDelegate, UICollectionViewDataSource, 
         layout collectionViewLayout: UICollectionViewLayout,
         referenceSizeForHeaderInSection section: Int
     ) -> CGSize {
-        CGSize(
-            width: collectionView.frame.width,
-            height: 265
-        )
+        CGSize(width: collectionView.frame.width, height: 265)
     }
-    func collectionView(
-        _ collectionView: UICollectionView,
-        viewForSupplementaryElementOfKind kind: String,
-        at indexPath: IndexPath
-    ) -> UICollectionReusableView {
-
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
         let header = collectionView.dequeueReusableSupplementaryView(
             ofKind: kind,
-            withReuseIdentifier: "HeaderView",
+            withReuseIdentifier: "\(HeaderView.self)",
             for: indexPath
         ) as! HeaderView
-
+        
         let categories = coreData.fetchCategories()
         header.configure(categories: categories)
-
+        
         header.onCategorySelect = { [weak self] category in
             guard let self = self else { return }
             self.cars = category.cars?.allObjects as? [CarEntity] ?? []
             self.collection.reloadData()
         }
-
         return header
     }
 }
