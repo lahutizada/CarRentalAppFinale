@@ -2,6 +2,12 @@ import Foundation
 
 class DataManager {
     enum DataManagerType: String, CaseIterable {
+        case name
+        case surname
+        case email
+        case phone
+        case birth
+        case password
         case IsLoggedIn
         case currentUserEmail
     }

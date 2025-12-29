@@ -45,8 +45,17 @@ class TabBarController: UITabBarController {
         
         let favoriteNavigation = UINavigationController(rootViewController: favorite)
         
+        let profile = storyboard?.instantiateViewController(withIdentifier: "\(ProfileController.self)") as! ProfileController
+        profile.tabBarItem = UITabBarItem(
+            title: "Profile",
+            image: UIImage(systemName: "person")?.withRenderingMode(.alwaysOriginal),
+            selectedImage: UIImage(systemName: "person.fill")?.withRenderingMode(.alwaysOriginal)
+        )
+        
+        let profileNavigation = UINavigationController(rootViewController: profile)
+        
         self.tabBar.backgroundColor = .none
-        viewControllers = [homeNavigation, searchNavigation, favoriteNavigation ]
+        viewControllers = [homeNavigation, searchNavigation, favoriteNavigation, profileNavigation ]
     }
     
     private func setupTabBarAppearance() {

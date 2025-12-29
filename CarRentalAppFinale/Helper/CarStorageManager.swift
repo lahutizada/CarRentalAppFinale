@@ -72,7 +72,6 @@ final class CarStorageManager {
                 carEntity.category = categoryEntity
                 
                 addedCars += 1
-                
             }
         }
         
