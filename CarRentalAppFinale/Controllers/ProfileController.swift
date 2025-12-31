@@ -38,7 +38,7 @@ class ProfileController: UIViewController {
         phoneLabel.layer.cornerRadius = 20
         phoneLabel.clipsToBounds = true
         logOutButton.tintColor = .loginBlack
-        logOutButton.layer.cornerRadius = 30
+        logOutButton.layer.cornerRadius = 35
         logOutButton.clipsToBounds = true
         
         loadDataToFile()
@@ -62,19 +62,19 @@ extension ProfileController {
             return
         }
         
-        nameLabel.text = "    Name: \(user.name ?? "")"
-        surnameLabel.text = "    Surname: \(user.surname ?? "")"
-        emailLabel.text = "    Email: \(user.email ?? "")"
-        phoneLabel.text = "    Phone: \(user.phone ?? "")"
-        birthLabel.text = "    Birth date: \(user.birth ?? "")"
+        nameLabel.text = "       Name: \(user.name ?? "")"
+        surnameLabel.text = "       Surname: \(user.surname ?? "")"
+        emailLabel.text = "       Email: \(user.email ?? "")"
+        phoneLabel.text = "       Phone: \(user.phone ?? "")"
+        birthLabel.text = "       Birth date: \(user.birth ?? "")"
     }
     
     private func clearLabels() {
-        nameLabel.text = "    Name:"
-        surnameLabel.text = "    Surname:"
-        emailLabel.text = "    Email:"
-        phoneLabel.text = "    Phone:"
-        birthLabel.text = "    Birth date:"
+        nameLabel.text = "       Name:"
+        surnameLabel.text = "       Surname:"
+        emailLabel.text = "       Email:"
+        phoneLabel.text = "       Phone:"
+        birthLabel.text = "       Birth date:"
     }
     
     func goToLogin() {

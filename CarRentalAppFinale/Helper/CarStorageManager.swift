@@ -100,22 +100,22 @@ final class CarStorageManager {
         request.predicate = NSPredicate(format: "isFavorite == YES")
         
         let result = (try? context.fetch(request)) ?? []
-        print("📦 fetchFavorites result:", result.count)
+        print("fetchFavorites result:", result.count)
         
         return result
     }
     func toggleFavorite(for car: CarEntity) {
-        print("⭐️ BEFORE:", car.isFavorite)
+        print("BEFORE:", car.isFavorite)
         
         car.isFavorite.toggle()
         
-        print("⭐️ AFTER:", car.isFavorite)
+        print("AFTER:", car.isFavorite)
         
         do {
             try context.save()
-            print("💾 saved")
+            print("saved")
         } catch {
-            print("❌ save error", error)
+            print("save error", error)
         }
     }
     private func fetchCar(by id: String) -> CarEntity? {

@@ -48,8 +48,8 @@ class TabBarController: UITabBarController {
         let profile = storyboard?.instantiateViewController(withIdentifier: "\(ProfileController.self)") as! ProfileController
         profile.tabBarItem = UITabBarItem(
             title: "Profile",
-            image: UIImage(systemName: "person")?.withRenderingMode(.alwaysOriginal),
-            selectedImage: UIImage(systemName: "person.fill")?.withRenderingMode(.alwaysOriginal)
+            image: UIImage(named: "account")?.withRenderingMode(.alwaysOriginal),
+            selectedImage: UIImage(named: "account.fill")?.withRenderingMode(.alwaysOriginal)
         )
         
         let profileNavigation = UINavigationController(rootViewController: profile)

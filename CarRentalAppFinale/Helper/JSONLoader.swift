@@ -14,16 +14,16 @@ final class JSONLoader {
             let url = Bundle.main.url(forResource: "Car", withExtension: "json"),
             let data = try? Data(contentsOf: url)
         else {
-            print("❌ JSON file not found in bundle")
+            print("JSON file not found in bundle")
             return nil
         }
 
         do {
             let categories = try JSONDecoder().decode([CarCategory].self, from: data)
-            print("✅ Categories decoded:", categories.count)
+            print("Categories decoded:", categories.count)
             return categories
         } catch {
-            print("❌ JSON decode error:", error)
+            print("JSON decode error:", error)
             return nil
         }
     }
